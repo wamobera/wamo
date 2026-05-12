@@ -1,31 +1,66 @@
-body {
-  max-width: 490px;
-  margin: 0 auto;
-  padding: 0 15px;
+@font-face {
+  font-family: dot;
+  src: url(font/DotGothic16-Regular.ttf) format(TrueType);
 }
 
-.logo img{
-  max-width: 100%;
-  height: auto;
-}
-
-.menu-button {
-  display: block;
-  text-decoration: none;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 15px 0;
+.home {
   text-align: center;
-  font-size: larger;
-  color: white;
-  background-color: rgb(34, 110, 180);
-  border-radius: 50px;
-  border: 3px solid #ffffff;
-  transition: all 0.2s ease-out;
+  color: rgb(77, 77, 77);
+  background-color: rgb(235, 235, 235);
+    font-family: dot;
 }
 
-.menu-button:hover {
-  color: blue;
-  background-color: white;
-  border: 3px solid #4500c5;
+.title {
+  padding: 20px;
+
+}
+
+.icon-item {
+  text-decoration: none;
+}
+
+.icon-item img {
+  width: 80px;
+  margin: 20px;
+  transition: all 0.3s ease;
+}
+
+.icon-item img:hover {
+  transform: translateY(-10px);
+}
+
+
+/*日記 */
+
+
+.nikki {
+  color: rgb(77, 77, 77);
+  background-color: rgb(235, 235, 235);
+  font-family: dot;
+  margin-left:  50px;
+}
+
+.nikki-title {
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.home-back {
+  margin-right: 50px;
+}
+
+.midasi {
+  padding: 10px;
+  font-size: 1.1em;
+}
+
+.nakami {
+  padding: 5px;
+  background-color: rgb(245, 245, 245);
+  max-width: 250px;
+  font-size: 0.8em;
+
 }
