@@ -43,7 +43,7 @@ body {
 .viewer {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   direction: rtl;
   overflow: hidden;
@@ -52,7 +52,7 @@ body {
 .kami {
   flex: 0 0 100vw;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
