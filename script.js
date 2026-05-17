@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         handleSwipe(); }, {passive: true});
 
     function handleSwipe() {
-        const swipeDistance = touchEndX - touchStartX:
+        const swipeDistance = touchEndX - touchStartX;
         const threshold = 30;
 
         const screenWidth = window.innerWidth;
