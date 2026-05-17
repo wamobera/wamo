@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     function handleSwipe() {
         const swipeDistance = touchEndX - touchStartX;
-        const threshold = 30;
+        const threshold = 25;
 
         const screenWidth = window.innerWidth;
 
