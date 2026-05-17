@@ -57,6 +57,7 @@ body {
   display: flex;
   justify-content: center;
   direction: ltr;
+  align-items: center;
 }
 
 .kami img {
