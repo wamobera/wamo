@@ -36,6 +36,8 @@ body {
 .miru-body {
   background-color: rgb(207, 205, 203);
   margin: 0;
+  overflow-y: hidden;
+  overscroll-behavior-y: none;
 }
 
 .viewer {
@@ -44,6 +46,7 @@ body {
   height: 100vh;
   overflow: hidden;
   direction: rtl;
+  overflow: hidden;
 }
 
 .kami {
