@@ -3,27 +3,38 @@ document.addEventListener('DOMContentLoaded', () =>{
     const pages = document.querySelectorAll('.kami');
     let currentIndex = 0;
 
-    window.addEventListener('click', (e) =>{
-        const screenWidth = window.innerWidth;
-        const clickX = e.clientX
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-        // 画面の右側半分をタップしたら次のページへ（右開き基準）
-        if (clickX > screenWidth / 2) {
-            if (currentIndex < pages.length - 1) {
-                currentIndex++;
-            }
-        } 
-        // 画面の左側半分をタップしたら前のページへ
-        else {
+    window.addEventListener('touchstart', (e) =>{
+        touchStartX = e.touches[0].clientX;
+        }, { passive: true});
+
+    window.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        handleSwipe(); }, {passive: true});
+
+    function handleSwipe() {
+        const swipeDistance = touchEndX - touchStartX:
+        const threshold = 30;
+
+        const screenWidth = window.innerWidth;
+
+        if (swipeDistance < -threshold) {
             if (currentIndex > 0) {
                 currentIndex--;
             }
         }
 
-        // 目的のページへアニメーションなしでパッと瞬間移動させる
+        else if (swipeDistance > threshold) {
+            if (currentIndex < pages.length - 1) {
+                currentIndex++;
+            }
+        }     
+
         viewer.scrollTo({
-            left: -currentIndex * screenWidth, // 右開き（rtl）のためマイナス方向
-            behavior: 'auto' // アニメーションなし（パッと切り替わる）
+            left: -currentIndex * screenWidth,
+            behavior: 'auto'
         });
-    });
+    }
 });
